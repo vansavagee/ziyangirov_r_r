@@ -1,4 +1,4 @@
-add_subdirectory(matplotplusplus)
+
 add_executable(btest_test btest_test.cpp)
 
 include(FetchContent)
