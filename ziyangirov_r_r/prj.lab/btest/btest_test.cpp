@@ -31,7 +31,7 @@ int main() {
 		coolpair tmpinp;
 		coolpair tmpalg;
 		const int k = n/100;
-		// генерация вводимых данных 
+		// РіРµРЅРµСЂР°С†РёСЏ РІРІРѕРґРёРјС‹С… РґР°РЅРЅС‹С… 
 		int j = 1;
 		for (int m = k; m < n; m += k) {
 			fileinput.open("C:\\gg\\test.txt");
@@ -49,7 +49,7 @@ int main() {
 					j = 1;
 				}
 			}
-		// подсчет времени для ввода для двух решений
+		// РїРѕРґСЃС‡РµС‚ РІСЂРµРјРµРЅРё РґР»СЏ РІРІРѕРґР° РґР»СЏ РґРІСѓС… СЂРµС€РµРЅРёР№
 			int n1 = 0;
 			auto start_input_1 = std::chrono::high_resolution_clock::now();
 			fileoutput.open("C:\\gg\\test.txt");
@@ -95,7 +95,7 @@ int main() {
 
 			tmpinp.second.push_back((end_input_2 - start_input_2).count());
 			
-			// подсчет времени работы алгоритмов для двух решений 
+			// РїРѕРґСЃС‡РµС‚ РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹ Р°Р»РіРѕСЂРёС‚РјРѕРІ РґР»СЏ РґРІСѓС… СЂРµС€РµРЅРёР№ 
 			int k1 = 0;
 			auto start_program_1 = std::chrono::high_resolution_clock::now();
 			k1 = std::distance(as.begin(), std::max_element(as.begin(), as.end()));
@@ -128,11 +128,11 @@ int main() {
 		 resalg.first.push_back(converted(tmpalg.first)/n);
 		 resalg.second.push_back(converted(tmpalg.second)/n);
 }
- //построение графиков
+ //РїРѕСЃС‚СЂРѕРµРЅРёРµ РіСЂР°С„РёРєРѕРІ
 tiledlayout(2, 1);
 nexttile();
 subplot(2, 1, 0);
-title("Ввод данных в первом решении задачи");
+title("Р’РІРѕРґ РґР°РЅРЅС‹С… РІ РїРµСЂРІРѕРј СЂРµС€РµРЅРёРё Р·Р°РґР°С‡Рё");
 plot(ndata, resinput.first, "-xr");
 ylabel("t/n");
 xlabel("n");
@@ -142,7 +142,7 @@ save("resinputfirst.png");
 tiledlayout(2, 1);
 nexttile();
 subplot(2, 1, 0);
-title("Ввод данных во втором решении задачи");
+title("Р’РІРѕРґ РґР°РЅРЅС‹С… РІРѕ РІС‚РѕСЂРѕРј СЂРµС€РµРЅРёРё Р·Р°РґР°С‡Рё");
 plot(ndata, resinput.second, "-xr");
 ylabel("t/n");
 xlabel("n");
@@ -151,7 +151,7 @@ save("resinputsecond.png");
 tiledlayout(2, 1);
 nexttile();
 subplot(2, 1, 0);
-title("Работа алгоритмической части в первом решении");
+title("Р Р°Р±РѕС‚Р° Р°Р»РіРѕСЂРёС‚РјРёС‡РµСЃРєРѕР№ С‡Р°СЃС‚Рё РІ РїРµСЂРІРѕРј СЂРµС€РµРЅРёРё");
 plot(ndata, resalg.first, "-xr");
 ylabel("t/n");
 xlabel("n");
@@ -160,7 +160,7 @@ save("resalgfirst.png");
 tiledlayout(2, 1);
 nexttile();
 subplot(2, 1, 0);
-title("Работа алгоритмической части во втором решении");
+title("Р Р°Р±РѕС‚Р° Р°Р»РіРѕСЂРёС‚РјРёС‡РµСЃРєРѕР№ С‡Р°СЃС‚Рё РІРѕ РІС‚РѕСЂРѕРј СЂРµС€РµРЅРёРё");
 plot(ndata, resalg.second, "-xr");
 ylabel("t/n");
 xlabel("n");
@@ -168,7 +168,7 @@ save("resalgsecond.png");
 
 
 std::wofstream finalreport;
-// создание .tex документа 
+// СЃРѕР·РґР°РЅРёРµ .tex РґРѕРєСѓРјРµРЅС‚Р° 
 finalreport.open("C:\\prgm\\proga\\ziyangirov_r_r\\prj.lab\\btest\\out\\build\\x64-Debug\\Ziyangirov_Ravil_21-3.tex");
 if (finalreport.is_open())
 {
@@ -180,23 +180,23 @@ if (finalreport.is_open())
 	finalreport << "\\usepackage[utf8]{inputenc}\n";
 	finalreport << "\\usepackage[english,russian]{babel}\n";
 	finalreport << "\\frenchspacing\n";
-	finalreport << "\\title{Отчёт}\n";
-	finalreport << "\\author{Зиянгиров Равиль БПМ-21-3}\n";
+	finalreport << "\\title{РћС‚С‡С‘С‚}\n";
+	finalreport << "\\author{Р—РёСЏРЅРіРёСЂРѕРІ Р Р°РІРёР»СЊ Р‘РџРњ-21-3}\n";
 	finalreport << "\\date{01.12.2022}\n";
 	finalreport << "\\begin{document}\n";
 	finalreport << "\\maketitle\n";
 	finalreport << "\\textbf{github:} \\href{https://github.com/vansavagee/ziyangirov\\_r\\_r/tree/main/ziyangirov\\_r\\_r/prj.lab/btest}\n";
-	finalreport << "\\section{Описание работы}\n";
-	finalreport << "Требовалось произвести необходимые замеры времени и изготовить отчёт. Мною были проведены 10 замеров времени каждого предложенного кода отдельно отдельно для ввода данных и алгоритмической части(всего 40 замеров), в зависимости от m - количества различных столовых и было найдено среднее время этих 10 замеров(каждый замер - новое количество различных столовых) для ввода данных и для алгоритмической части двух предложенных кодов.\n";
-	finalreport << "Следующие 4 графика - это графики зависимостей t/n от n, где \\textbf{}t - это усредненное время 10 замеров с разным m работы того или иного участка кода, \\textbf{n} - это количество введенных данных.\n";
-	finalreport << "\\textbf{n} меняется от 10000 до 200000 с шагом в 10000. \n";
-	finalreport << "\\section{Графики зависимостей}\n";
+	finalreport << "\\section{РћРїРёСЃР°РЅРёРµ СЂР°Р±РѕС‚С‹}\n";
+	finalreport << "РўСЂРµР±РѕРІР°Р»РѕСЃСЊ РїСЂРѕРёР·РІРµСЃС‚Рё РЅРµРѕР±С…РѕРґРёРјС‹Рµ Р·Р°РјРµСЂС‹ РІСЂРµРјРµРЅРё Рё РёР·РіРѕС‚РѕРІРёС‚СЊ РѕС‚С‡С‘С‚. РњРЅРѕСЋ Р±С‹Р»Рё РїСЂРѕРІРµРґРµРЅС‹ 10 Р·Р°РјРµСЂРѕРІ РІСЂРµРјРµРЅРё РєР°Р¶РґРѕРіРѕ РїСЂРµРґР»РѕР¶РµРЅРЅРѕРіРѕ РєРѕРґР° РѕС‚РґРµР»СЊРЅРѕ РѕС‚РґРµР»СЊРЅРѕ РґР»СЏ РІРІРѕРґР° РґР°РЅРЅС‹С… Рё Р°Р»РіРѕСЂРёС‚РјРёС‡РµСЃРєРѕР№ С‡Р°СЃС‚Рё(РІСЃРµРіРѕ 40 Р·Р°РјРµСЂРѕРІ), РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ m - РєРѕР»РёС‡РµСЃС‚РІР° СЂР°Р·Р»РёС‡РЅС‹С… СЃС‚РѕР»РѕРІС‹С… Рё Р±С‹Р»Рѕ РЅР°Р№РґРµРЅРѕ СЃСЂРµРґРЅРµРµ РІСЂРµРјСЏ СЌС‚РёС… 10 Р·Р°РјРµСЂРѕРІ(РєР°Р¶РґС‹Р№ Р·Р°РјРµСЂ - РЅРѕРІРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЂР°Р·Р»РёС‡РЅС‹С… СЃС‚РѕР»РѕРІС‹С…) РґР»СЏ РІРІРѕРґР° РґР°РЅРЅС‹С… Рё РґР»СЏ Р°Р»РіРѕСЂРёС‚РјРёС‡РµСЃРєРѕР№ С‡Р°СЃС‚Рё РґРІСѓС… РїСЂРµРґР»РѕР¶РµРЅРЅС‹С… РєРѕРґРѕРІ.\n";
+	finalreport << "РЎР»РµРґСѓСЋС‰РёРµ 4 РіСЂР°С„РёРєР° - СЌС‚Рѕ РіСЂР°С„РёРєРё Р·Р°РІРёСЃРёРјРѕСЃС‚РµР№ t/n РѕС‚ n, РіРґРµ \\textbf{}t - СЌС‚Рѕ СѓСЃСЂРµРґРЅРµРЅРЅРѕРµ РІСЂРµРјСЏ 10 Р·Р°РјРµСЂРѕРІ СЃ СЂР°Р·РЅС‹Рј m СЂР°Р±РѕС‚С‹ С‚РѕРіРѕ РёР»Рё РёРЅРѕРіРѕ СѓС‡Р°СЃС‚РєР° РєРѕРґР°, \\textbf{n} - СЌС‚Рѕ РєРѕР»РёС‡РµСЃС‚РІРѕ РІРІРµРґРµРЅРЅС‹С… РґР°РЅРЅС‹С….\n";
+	finalreport << "\\textbf{n} РјРµРЅСЏРµС‚СЃСЏ РѕС‚ 10000 РґРѕ 200000 СЃ С€Р°РіРѕРј РІ 10000. \n";
+	finalreport << "\\section{Р“СЂР°С„РёРєРё Р·Р°РІРёСЃРёРјРѕСЃС‚РµР№}\n";
 	finalreport << "\\includegraphics[scale=0.6]{resinputfirst}    \n";
 	finalreport << "\\includegraphics[scale=0.6]{resinputsecond}\n";
 	finalreport << "\\includegraphics[scale=0.6]{resalgfirst}\n";
 	finalreport << "\\includegraphics[scale=0.5]{resalgsecond}\n";
-	finalreport << "\\section{Вывод по замерам}  \n";
-	finalreport << "Первый код считывает данные дольше чем второй, однако алгоритмическая часть первого кода работает быстрее. \n";
+	finalreport << "\\section{Р’С‹РІРѕРґ РїРѕ Р·Р°РјРµСЂР°Рј}  \n";
+	finalreport << "РџРµСЂРІС‹Р№ РєРѕРґ СЃС‡РёС‚С‹РІР°РµС‚ РґР°РЅРЅС‹Рµ РґРѕР»СЊС€Рµ С‡РµРј РІС‚РѕСЂРѕР№, РѕРґРЅР°РєРѕ Р°Р»РіРѕСЂРёС‚РјРёС‡РµСЃРєР°СЏ С‡Р°СЃС‚СЊ РїРµСЂРІРѕРіРѕ РєРѕРґР° СЂР°Р±РѕС‚Р°РµС‚ Р±С‹СЃС‚СЂРµРµ. \n";
 	finalreport << "\\end{document}\n";
 }
 finalreport.close();
